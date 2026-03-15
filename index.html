@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Biblia</title>
+<style>
+body{
+font-family: Arial;
+padding:20px;
+background:#f5f5f5;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Biblia</h1>
+
+<pre id="texto"></pre>
+
+<script>
+
+fetch("es_rvr.json")
+.then(r=>r.json())
+.then(data=>{
+document.getElementById("texto").innerText=JSON.stringify(data,null,2);
+});
+
+</script>
+
+</body>
+</html>
